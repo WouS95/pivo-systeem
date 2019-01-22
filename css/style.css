@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family:
+    'helvetica neue',
+    'Comic Sans MS',
+    'helvetica',
+    'arial';
+}
+section#content, header, footer {
+    padding: 10px;
+}
+.loginform label {
+  font-weight: bold;
+  clear: both;
+  display: block;
+  color: #95989A;
+  font-size: 130%;
+}
+
+body {
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+header {
+  background: #2A711D;
+  margin: 0px 0px 10px 0px;
+  color: white;
+  overflow: auto;
+  text-align: center;
+}
+header .icons img{
+  width:10%;
+  float: right;
+}
+header .icons .adminlink{
+  width:10%;
+  margin-top: 15px;
+  float: right;
+  margin-right: 20px;
+  color: #fff;
+}
+header .homebutton{
+  width:10%;
+  float: left;
+}
+
+.hiddensection{
+  width:100%;
+  position: absolute;
+  background: #fff;
+  overflow: auto;
+  padding:0 10%;
+  display: none;
+  /* top:-100%; */
+  transition: .4s linear;
+}
+/* .hiddensection::before {
+    background: red;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    z-index: -1;
+} */
+#adminsettingssections{
+display: flex;
+justify-content: space-between;
+background: #78ab6f;
+color:#183513;
+}
+#adminsettingssections > input[type='radio']
+{
+display: none;
+
+}
+#adminsettingssections > input[type='radio']:checked + label
+{
+font-weight: bold;
+text-decoration: underline;
+
+}
+#settingsmenu.visible{
+  /* top:10%; */
+  display: block;
+}
+#messagessection.visible{
+  /* top:10%; */
+  display: block;
+}
+.adminlink{
+    float:left;
+}
+header h1 {
+  margin: 0;
+  font-size: 123%;
+  font-weight: normal;
+}
+
+input[type="submit"], a.buttonstyle {
+  clear: both;
+  display: block;
+  /* width: initial !important; */
+  margin: 10px 0;
+  background: #2A711D;
+  color: white;
+  /* border: none!important; */
+  padding: 15px 0px;
+  /* height: 40px; */
+  text-align: center;
+  font-size: 120%;
+  width: 100%;
+  -webkit-appearance:  none;
+}
+
+form.loginform, form.changesettings {
+  padding: 0 10px;
+}
+
+.loginform input[type="text"], .loginform input[type="password"], .changesettings input {
+  margin-bottom: 20px;
+  margin-top: 5px;
+  border: 1px solid #95989A;
+  min-height: 40px;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 100%;
+}
+input[type="checkbox"] + .customcheckbox{
+  background-image: url(../images/fail.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  display: block;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+input[type="checkbox"]:checked + .customcheckbox{
+  background-image: url(../images/success.svg);
+}
+.morethenzero, .useritem:checked + label > .usernamebutton{
+  transition: background-color 0.5s ease;
+  background-color: green;
+  color: white!important;
+
+}
+.orderbutton, .usernamebutton{
+  border: 1px solid grey;
+  text-align:  center;
+  color: grey;
+  margin-top: 10px;
+  min-width: 50%;
+  justify-content: space-around;
+  display: flex;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+  font-size: 130%;
+}
+#bestelformulier > .producten{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+#bestelformulier .producten .orderbutton:first-of-type, #bestelformulier .producten .orderbutton:last-of-type {
+    width: 100%;
+}
+
+.binnenbuitenopkomst > input[type="radio"]:checked+label {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+p {}
+
+span.plus {
+    padding: 0px;
+}
+
+.orderbutton > span {
+    padding: 30px 10px;
+}
+
+
+label {
+    cursor: pointer;
+}
+
+
+label {}
+
+.binnenbuitenopkomst {
+    display: flex;
+    justify-content:  space-between;
+    font-size: 135%;
+}
+@media (max-width:350px) {
+  .binnenbuitenopkomst{
+    font-size: 120%;
+  }
+}
+
+
+footer h4 img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+img {
+}
+#userstats .bovensterij, #userstats .ondersterij
+{
+  width:100%;
+  overflow: auto;
+}
+#userstats > div > div{
+    float: left;
+    width: 50%;
+    display: block;
+    margin-bottom: 10px;
+    min-height:90px;
+    /* padding-left: 10px; */
+}
+
+section#userstats {
+    overflow: auto;
+    width: 100%;
+    margin: 0 auto;
+    width: 90%;
+}
+
+#userstats > div > div > p:first-child {
+    margin: 0;
+    font-size: 120%;
+}
+#userstats > div > div > p {
+    margin: 0;}
+
+#userstats > div > div > ul {
+    padding:  0;
+    list-style:  none;
+    margin-top: 0;
+    font-size: 90%;
+    line-height: 1.6em;
+}
+
+.ajaxloader{
+  position: fixed;
+  /* width: 100%; */
+  width: 495px;
+  left: 50%;
+  max-width: calc(100vw - 10px);
+  transform: translateX(-50%);
+  display: none;
+  background: #fff;
+  /* height: 100%; */
+  bottom: 10px;
+  border-radius: 10px;
+  padding: 5px 30px;
+}
+.ajaxloader img{
+  height: 50px;
+  float: left;
+  display: block;
+}
+.ajaxloader p{
+    float: right;
+}
+.ajaxloader#loadingsuccess{color: #2A711D;border-bottom: 5px solid #2A711D;background: #94ce89;}
+.ajaxloader#loadinginprogress{color:grey;background: #cecece;border-bottom: 5px solid grey;}
+.ajaxloader#loadingfailed{color:red;border-bottom: 5px solid red;background: #ffb9b9;}
+
+table.blueTable {
+  border: 1px solid #A4A4A4;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.blueTable td, table.blueTable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+  width:10%;
+}
+table.blueTable tbody td {
+  font-size: 13px;
+}
+table.blueTable tr:nth-child(even) {
+  background: #FFFFFF;
+}
+table.blueTable thead {
+  background: #FFFFFF;
+  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 66%, #FFFFFF 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 66%, #FFFFFF 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 66%, #FFFFFF 100%);
+}
+table.blueTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  border-left: 2px solid #D0E4F5;
+}
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+
+table.blueTable tfoot td {
+  font-size: 14px;
+}
+table.blueTable tfoot .links {
+  text-align: right;
+}
+table.blueTable tfoot .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+
+footer .credits {
+    background: #2A711D;
+    /* position: absolute; */
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-top: 10%;
+    /* left: 0; */
+    color: #ffffff40;
+    padding: 0 3%;
+    transition: .2s;
+    overflow: auto;
+    /* bottom:-100px; */
+}
+footer .credits:hover{
+  color:#fff;
+}
+
+footer .credits a {
+    color: inherit;
+}
+
+input:invalid {
+  background: pink;
+}
+
+.gebruikers.section{
+    max-height: 50vh;
+    overflow: scroll;
+    box-shadow: inset 0 -10px 6px -8px #00000061;
+}
+
+.usernamebutton {
+    width: 45%;
+    margin-left: 2.5%;
+    float: left;
+    min-width: 0;
+    height: 3em;
+    line-height: 3em;
+    overflow: hidden;
+    font-size: 95%;
+}
